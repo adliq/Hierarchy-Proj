@@ -1,0 +1,215 @@
+/* ---------- THEME ---------- */
+:root {
+  --bg-color: #f2f2f3;
+  --text-color: #0a0a0a;
+  --card-bg: #e5e5e5;
+  --border-color: #d0d0d0;
+
+  --brand-orange: #ef5a2f;
+  --link: #0b57d0;
+  --link-hover: #0949af;
+
+  --btn-black: #0f0f10;
+  --btn-black-text: #ffffff;
+
+  --btn-green: #00c10d;
+  --btn-green-text: #0b0b0b;
+
+  --muted-text: #6b6b6b;
+  --shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.dark {
+  --bg-color: #0e0c0c;
+  --text-color: #f7f3f2;
+  --card-bg: #6f5b5b;
+  --border-color: #8d7a7a;
+  --link: #2f7df4;
+  --link-hover: #3f8cff;
+  --muted-text: #cbbfbf;
+  --shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* ---------- PAGE SCOPE ---------- */
+.landing-container{
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 28px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: block;
+}
+
+.landing-grid{
+  max-width: 1400px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 1024px){
+  .landing-container{ padding: 28px 20px; }
+  .landing-grid{ grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-height: 800px){
+  .landing-container{ padding: 24px 20px; }
+}
+
+/* ---------- HERO (LEFT) ---------- */
+.hero-section{ text-align: center; }
+
+.hero-title{
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.03;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: var(--brand-orange);
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle{
+  font-size: clamp(20px, 2.6vw, 40px);
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+  white-space: pre-line; /* honors \n split */
+}
+
+/* ---------- AUTH (RIGHT) ---------- */
+.auth-section{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+@media (min-height: 700px){
+  .auth-section{ align-items: center; }
+}
+
+/* Wider card, same “length” feel */
+.auth-card{
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: clamp(560px, 42vw, 680px);  /* wider */
+  max-width: 100%;
+  padding: 22px 24px 20px;
+}
+
+.auth-title{
+  font-size: clamp(22px, 2.4vw, 40px);
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--text-color);
+}
+
+/* ---------- FORM ---------- */
+.form{ width: 100%; }
+
+.form-group{ margin-bottom: 14px; }
+
+.form-label{
+  display: block;
+  font-size: 16px;
+  color: var(--text-color);
+  margin-bottom: 6px;
+}
+
+/* Slightly smaller inputs */
+.form-input{
+  width: 100%;
+  font-size: 16px;
+  height: 42px;                 /* ↓ shorter */
+  padding: 8px 12px;            /* ↓ less vertical padding */
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  outline: none;
+}
+.dark .form-input{
+  background: #2a2a2a;
+  color: #f1f1f1;
+  border-color: #444;
+}
+
+/* Keep space for the eye button inside password */
+.input-wrap{ position: relative; }
+.input-wrap .form-input{ padding-right: 44px; }
+
+/* Eye / Eye-off toggle (SVG) */
+.toggle-eye{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #444;
+  opacity: .9;
+}
+.toggle-eye:hover{ opacity: 1; }
+.dark .toggle-eye{ color: #eee; }
+.toggle-eye svg{ width: 22px; height: 22px; }
+
+/* Center Sign in + Forgot Password line */
+.form-actions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 10px;
+}
+
+/* ---------- BUTTONS & LINKS ---------- */
+.btn-signin{
+  background: var(--btn-black);
+  color: var(--btn-black-text);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 12px 26px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.btn-signin:hover{ opacity: .93; }
+
+.forgot-line{
+  font-size: 14px;
+  color: var(--text-color);
+  text-align: center;
+}
+.forgot-line .forgot-password{
+  color: var(--link);
+  text-decoration: underline;
+}
+.forgot-line .forgot-password:hover{ color: var(--link-hover); }
+
+.create-account-wrap{ text-align: center; margin-top: 22px; }
+.create-account-text{ color: var(--muted-text); font-size: 18px; margin-bottom: 10px; }
+.create-account-btn{
+  display: inline-block;
+  background: var(--btn-green);
+  color: var(--btn-green-text);
+  border: none;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 10px 22px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.create-account-btn:hover{ filter: brightness(.96); }
