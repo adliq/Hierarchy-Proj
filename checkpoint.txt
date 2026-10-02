@@ -1,0 +1,72 @@
+3/28
+Majd: 
+-I have dowloaded external files to replit so our software can work.
+-I made MongoDB account and connected it to replit
+-Added a few test subjects to see if it works on the webview (using hoppscotch)
+------------------------------------------------------------------------------
+3/29
+Majd:
+-Successfully implemented routes to create and fetch users
+-----------------------------------------------------------------------------
+4/2
+Adli:
+-Added to schema password, profile picture, cover picture, and follower list
+-----------------------------------------------------------------------------
+4/15
+Majd:
+-Created Idea.js (linked to models) and ideaRoutes.js (linked to Routes)
+-Defined the idea schema 
+-Created a .txt file "timeSheet" to track our hrs on the project 
+-Completed imp                                   l4569+lementing and testing the GET and POST endpoints for ideas in their app
+
+Adli:
+-added favourites and following in user schema and implemented favourite logic but still did not test
+-----------------------------------------------------------------------------
+4/30
+Majd:
+- Updated favorite and tested it. 
+- Created formal presentation for the business (sent on Whatsapp)
+- Created a detailed outline (sent on Whatsapp)
+------------------------------------------------------------------------------
+5/1
+Majd:
+- Added validation to check if the idea exists before adding/removing (userRoutes.js) 
+- Added option to display all favorite/saved ideas (userRoutes.js)
+>> did not test yet
+---------------------------------------------------------------------------
+5/2
+Majd:
+- Created a new folder and file (middleware-auth.js) that protects certain routes by ensuring the user is authenticated before they can access them. Then, applied it to userRoutes and ideaRoutes and wrote the neccessary code for auth.js 
+
+- Updated userRoutes.js to use verifyToken
+
+- Updated ideaRoutes.js to protected POST / (create idea) and protected POST /fav/:id ,and Ensured GET / remains public 
+------------------------------------------------------------------------------
+5/4
+Majd:
+- Tested everything in the code 
+- Registered a user with hashed password using bcrypt (userRoutes.js & .env)
+- Added a feature to delete a user (will not be part of the app but is crucial for testing) (userRoutes.js)
+----------------------------------------------------------------------------------------
+5/12
+Majd:
+- Updated and tested userRoutes.js to support profile editing (bio, profilePicture, coverPicture, interests)
+- Added PUT /profile route with middleware to allow authenticated users to edit their profile
+- Added and tested POST /follow/:userId and POST /unfollow/:userId to enable users to follow and unfollow each other
+- Downloaded frontend packages but ran into some problems (will resume tmrw)
+-------------------------------------------------------------------------------------------------
+5/13
+Majd & Adli:
+- downloaded front-end packages
+- Last step left to have a front-end web
+------------------------------------------------------
+5/14
+Majd:
+- Still didn't resolve issue (see whatsapp)
+-----------------------------------------------------
+5/21
+Adli:
+-tried resolving tailwind install still no luck decied to move to vs code
+5/22
+Adli:
+-moved to vs code check chatgpt and started working on frontend need to setup meeting
